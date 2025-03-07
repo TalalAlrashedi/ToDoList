@@ -1,0 +1,120 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #fffbf4;
+
+}
+
+.container{
+    direction: rtl;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-task{
+    width: 80%;
+    max-height: 600px;
+    background-color: #fffbf4;
+    align-items: center;
+    overflow: auto;
+    padding-top: 20px;
+    box-shadow: 3px 3px 5px 5px  rgba(0, 0, 0, 0.08);
+
+
+}
+
+#navbar{
+    background-color: #ff9f19;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    min-height: 100px;
+   
+}
+
+.row{
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: 5px solid rgb(228, 228, 228);
+    border-radius: 100px;
+
+}
+
+#input-task{
+
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: 5px solid rgb(228, 228, 228);
+    border-radius: 100px;
+    
+}
+
+form{
+    position: relative;
+}
+
+#BtnAddTask{
+
+    height: 100%;
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    border: none;
+    background-color: #ffaa00;
+    border-radius: 100px;
+    padding: 0 30px;
+
+}
+
+
+#tasks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+
+    
+}
+
+
+/* ======for task =============================== */
+#task{
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    border-bottom: 5px solid #ddd;
+    box-shadow: 3px 3px 0px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+#task:hover{
+    background-color: #efefef;
+    box-shadow: 3px 3px 0px 3px rgba(177, 67, 67, 0.08);
+    transform: translateY(-10px);
+    
+}
+#task:active {
+    transform: translateY(5px); 
+    box-shadow: 0px 5px 15px rgba(177, 67, 67, 0.15); 
+}
+/* ================================================ */

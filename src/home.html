@@ -5,6 +5,9 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -14,10 +17,10 @@
 <body>
     <!--container-->
     <div class="container">
-
+      
         <!--table task-->
         <div id="table-task">
-
+          <h2>مرحيا بك في موقع مهامي </h2>
 
             <!--navbar-->
             
@@ -33,7 +36,8 @@
             <div>
               <form>
                 <input id="input-task" type="text">
-                <button id="BtnAddTask">
+                
+                <button id="BtnAddTask" class="btn btn-primary">
                     <i class="bi bi-plus-square-fill"></i>
                 </button>
             </form> 
@@ -44,50 +48,42 @@
 
                
                     <!--task-->
-                    <div id="task">
+                    <div class="task">
 
 
-                        <div>
+                        <div id="info">
                         <h3>الذهاب الى الجيم</h3>
-                        <span>2025/3/12</span>
+                        <span>
+                            <i class="bi bi-calendar-minus"></i>
+                        </span>
                         
                         </div>
 
                         <!--ACTIONS BUTTONS-->
                         <div class="actions-btn">
 
-                          <button class="btn btn-warning ">edit</button>
-                          <button class="btn btn-danger ">delete</button>
-                          <button class="btn btn-success btn-round">CompleteTask</button>
 
+                          <button class="btn btn-danger ">
+                                <i class="bi bi-x-circle-fill"></i>
+                              </button>
+
+                          <button class="btn btn-warning ">
+                            <i class="bi bi-pencil-fill"></i>
+                          </button>
+                          
+                        
+
+                          <button class="btn btn-success btn-round">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </button>
+
+                          
                         </div>
                   <!--//ACTIONS BUTTONS//-->
 
 
                     </div>
                     <!--//task//-->
-  <!--task-->
-  <div id="task">
-
-
-    <div>
-    <h3>الذهاب الى الجيم</h3>
-    <span>2025/3/12</span>
-    </div>
-</div>
-<!--//task//-->
-  <!--task-->
-  <div id="task">
-
-
-    <div>
-    <h3>الذهاب الى الجيم</h3>
-    <span>2025/3/12</span>
-    </div>
-</div>
-<!--//task//-->
-
- 
                 </div>
                 <!--//tasks//-->
 
@@ -103,4 +99,7 @@
 
 
 </body>
+
+
+<script src="main.js"></script>
 </html>

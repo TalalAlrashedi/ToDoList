@@ -1,13 +1,22 @@
+:root{
+
+    --main-color:#fffbf4
+    --second-color:#fffbf4
+}
+
+
 body{
     margin: 0px;
     padding: 0px;
     background-color: #fffbf4;
+    font-family: "Cairo", sans-serif;
 
 }
 
 .container{
     direction: rtl;
-    width: 100%;
+    /* width: 100%; */
+    width: min(70%,90%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,22 +25,24 @@ body{
 }
 
 #table-task{
-    width: 90%;
+    width: min(1000px,90%);
     max-height: 600px;
     background-color: #fffbf4;
     align-items: center;
     overflow: auto;
     padding-top: 20px;
-    box-shadow: 3px 3px 5px 5px  rgba(0, 0, 0, 0.08);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.08),
+    -10px -10px 5px rgb(225, 224, 224)
+    ;
     padding: 10px;
-    padding-top: 20px;
+
 
 
 }
 
 #navbar{
-    background-color: #ff9f19;
-    color: rgb(0, 0, 0);
+    background-color: #1930ff;
+    color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -43,11 +54,14 @@ body{
    
 }
 
+#info{
+    width: 30%;
+}
 
 
 #input-task{
 
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     outline: none;
     width: 100%;
     padding: 20px;
@@ -63,17 +77,13 @@ form{
 
 #BtnAddTask{
 
-    height: 70px;
-    width: 100px;
-    font-size: 20px;
+    height: 100%;
+    width: 140px;
+    font-size: 25px;
     position: absolute;
     left: 1px;
-  
-
-    border: none;
-    background-color: #ffaa00;
-    border-radius: 30px;
-    margin-bottom: 3px;
+    color: #efefef;
+    border-radius: 1000px;
 }
 
 
@@ -90,7 +100,7 @@ form{
 
 
 /* ======for task =============================== */
-#task{
+.task{
 
     display: flex;
     background-color: #fff;
@@ -103,15 +113,26 @@ form{
     transition: all 0.3s ease-in-out;
 }
 
-#task:hover{
+.task:hover{
     background-color: #efefef;
     box-shadow: 3px 3px 0px 3px rgba(177, 67, 67, 0.08);
     transform: translateY(-10px);
     
 }
-#task:active {
+.task:active {
     transform: translateY(5px); 
     box-shadow: 0px 5px 15px rgba(177, 67, 67, 0.15); 
+}
+
+.done{
+    background-color: #1ba959;
+    color: #f1f1f1;
+}
+
+.done:hover{
+    background-color: #34bb6e;
+    box-shadow: 3px 3px 0px 3px rgba(177, 67, 67, 0.08);
+    transform: translateY(-10px);
 }
 /* ================================================ */
 
@@ -121,28 +142,13 @@ form{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 20px;
-    padding: 20px;
-    gap: 20px;
-}
-
-
-@media (max-width: 768px) {
-    .actions-btn {
-        flex-direction: column;  /* تغيير ترتيب العناصر إلى عمودي */
-        align-items: center;  /* محاذاة العناصر إلى اليسار */
-    }
-}
-
-@media (max-width: 480px) {
-    .actions-btn {
-        gap: 5px;  /* تقليل المسافة بين العناصر */
-        padding: 10px;  /* تقليل المسافة حول العناصر */
-    }
+    padding: 10px;
+    gap: 10px;
 }
 
 .actions-btn button{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
+

@@ -1,22 +1,4 @@
-let tasks = [
-    {
-        "title": "قراءة كتاب",
-        "date": "2025/2/2",
-        "isDone": true
-
-    }
-    ,
-    {
-        "title": "حل الواجب",
-        "date": "2025/2/2",
-        "isDone": false}
-    ,
-    {
-        "title": "المذاكرة",
-        "date": "2025/2/2",
-        "isDone": false
-    }
-]
+let tasks = []
 
 const btnSubmitTask = document.getElementById("BtnAddTask")
 
@@ -40,11 +22,8 @@ const renderTasks= () => {
 
     const taskElment = tasks.map((task,index) => 
       
-      
-      `
-    
+      `   
          <div class="task ${task.isDone? 'done': ''}">
-
 
                         <div id="info">
                         <h3> ${task.title}</h3>
@@ -82,19 +61,16 @@ const renderTasks= () => {
                             </button>
 
                             `}
-                         
-
-                          
+                                          
                         </div>
                   <!--//ACTIONS BUTTONS//-->
 
                     </div>
-        
+
         `).join('')
 
         taskContainer.innerHTML = taskElment
 }
-
 
 const dateTask = () => {
 
@@ -105,7 +81,6 @@ const dateTask = () => {
         return date
 }
 
-
 //objectTask
 const addTasks = () => {
 
@@ -113,18 +88,14 @@ const addTasks = () => {
 
         e.preventDefault()
         
-        
-
         const inputTaskElment = document.getElementById("input-task")
         const inputTask = inputTaskElment.value.trim()
 
         if (!inputTask)
           {
-            alert("الرجاء ادخال المهمة .");
+            alert("الرجاء ادخال المهمة ");
             return;
           }
-
-        
 
         objTask = {
           "title": inputTask,
@@ -135,17 +106,13 @@ const addTasks = () => {
         tasks.push(objTask)
         taskStored()
         renderTasks()
-        
 
         inputTaskElment.value= "";
     }
   
-  
-  
   )
 
 }
-
 
 const deleteTask = (index) => {
 
@@ -158,7 +125,6 @@ const deleteTask = (index) => {
     renderTasks()
   }
  
-
 }
 
 const updateTask = (index) => {
@@ -176,7 +142,6 @@ const updateTask = (index) => {
   taskStored()
   renderTasks()
 
-
 }
 
 const toggleTask = (index) => {
@@ -188,13 +153,13 @@ const toggleTask = (index) => {
   renderTasks()
 }
 
-
 const deleteAllTask = () => {
 
   if(tasks.length == 0){
     
     return alert("لايوجد مهام")
   }
+
   let isConfirm = confirm("هل تريد حذف جميع المهام؟")
   
   if(isConfirm){
@@ -202,7 +167,6 @@ const deleteAllTask = () => {
     renderTasks()
     taskStored()
   }
-
 }
 
 //=========LocalStorage============//
@@ -214,9 +178,5 @@ const taskStored = () => {
 
 }
 
-
-
-
 renderTasks()
 addTasks()
-

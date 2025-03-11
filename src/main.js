@@ -32,6 +32,10 @@ taskGetStorage()
 const renderTasks= () => {
 
     let taskContainer = document.getElementById("tasks")
+    let taskCounter = document.getElementById("taskCounter")
+    
+    taskCounter.textContent = tasks.length
+    
     taskContainer.innerHTML= ""
 
     const taskElment = tasks.map((task,index) => 
@@ -66,12 +70,13 @@ const renderTasks= () => {
                         
                           ${task.isDone ? `
 
-                            
+                          
                           <button onclick="toggleTask(${index})" class="btn btn-danger btn-round">
                             <i class="bi bi-x-circle-fill"></i>
                           </button>
                             
                             `: `
+                            
                              <button onclick="toggleTask(${index})" class="btn btn-success btn-round">
                             <i class="bi bi-check-circle-fill"></i>
                             </button>
@@ -99,6 +104,8 @@ const dateTask = () => {
          
         return date
 }
+
+
 //objectTask
 const addTasks = () => {
 
@@ -182,6 +189,22 @@ const toggleTask = (index) => {
 }
 
 
+const deleteAllTask = () => {
+
+  if(tasks.length == 0){
+    
+    return alert("لايوجد مهام")
+  }
+  let isConfirm = confirm("هل تريد حذف جميع المهام؟")
+  
+  if(isConfirm){
+    tasks = []
+    renderTasks()
+    taskStored()
+  }
+
+}
+
 //=========LocalStorage============//
 
 const taskStored = () => {
@@ -190,6 +213,8 @@ const taskStored = () => {
     localStorage.setItem("tasks", taskString)
 
 }
+
+
 
 
 renderTasks()

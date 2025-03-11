@@ -16,22 +16,27 @@
 </head>
 <body>
     <!--container-->
+    <h2 class="title">مرحبا بك في ادارة المهام </h2>
     <div class="container">
       
         <!--table task-->
         <div id="table-task">
-          <h2>مرحيا بك في موقع مهامي </h2>
+         
 
             <!--navbar-->
             
             <div id="navbar">
-
                 <h2>مهامي</h2>
-
-              
             </div>
             <!--//navbar//-->
+            <hr>
 
+
+            <div id="deleteAllTask" >
+              <p onclick="deleteAllTask()" class="btn btn-danger">حذف جميع المهام
+                <span id="taskCounter"></span>
+              </p>
+            </div> 
             <!--Add task section-->
             <div>
               <form>
@@ -102,4 +107,5 @@
 
 
 <script src="main.js"></script>
+
 </html>

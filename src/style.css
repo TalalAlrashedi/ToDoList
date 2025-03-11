@@ -1,15 +1,23 @@
 :root{
 
-    --main-color:#fffbf4
-    --second-color:#fffbf4
+    --main-color:#fffbf4;
+    --second-color:#fffbf4;
+    --navbra-color:#3f60c5;
 }
+
+/* :root{
+
+    --main-color:#efedea;
+    --second-color:#e1e1e1;
+    --navbra-color:#1f298b;
+} */
 
 
 body{
     margin: 0px;
     padding: 0px;
     direction: rtl;
-    background-color: #fffbf4;
+    background-color: var(--main-color);
     font-family: "Cairo", sans-serif;
 
 }
@@ -17,31 +25,37 @@ body{
 .container{
    
     width: min(90%, 1000px); 
-    min-height: 100vh;
-  
+    height: min(100vh, 90vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
 }
 
-/* .container h2 {
-    margin-top: 20px;
-} */
  .title{
-    
+    width: min(1200px,100%);
+    color: var(--navbra-color);
     font-size: 30px;
     margin-top: 20px;
+    padding: 0px 30px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
     animation: 
     typing 3.5s steps(100, end),
     blink-caret .75s step-end infinite;
  }
-
  
+ .title img {
+    mix-blend-mode: multiply;
+    filter: contrast(1.2) brightness(1.1);
+    width: 50px;
+    height: 50px;
+    background-color: #1ba959;
+  
 
-/* The typing effect */
+  }
+
+
 @keyframes typing {
  from { width: 0 }
  to { width: 100% }
@@ -55,7 +69,7 @@ body{
 #table-task{
     width: min(1000px,90%);
     max-height: 650px; 
-    background-color: #fffbf4;
+    background-color: var(--second-color);
     overflow: auto;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08),
     -5px -5px 5px rgb(225, 224, 224);
@@ -67,7 +81,7 @@ body{
 }
 
 #navbar{
-    background-color: #1930ff;
+    background-color: var(--navbra-color);
     color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
@@ -144,9 +158,9 @@ form{
 
 
     display: flex;
-    justify-content: space-between; /* إضافة مسافة بين العناصر */
+    justify-content: space-between; 
     padding: 10px;
-    background-color: #fff;
+    background-color: #fcfcfc;
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;
@@ -165,7 +179,7 @@ form{
 }
 .task:active {
     transform: translateY(5px); 
-    box-shadow: 0px 5px 15px rgba(177, 67, 67, 0.15); 
+    /* box-shadow: 0px 5px 15px rgba(177, 67, 67, 0.15);  */
 }
 
 .done{

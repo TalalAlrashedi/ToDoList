@@ -2,7 +2,6 @@ let tasks = []
 
 const btnSubmitTask = document.getElementById("BtnAddTask")
 
-
 const taskGetStorage = () => {
 
     const retrivedTask = JSON.parse(localStorage.getItem("tasks"))
